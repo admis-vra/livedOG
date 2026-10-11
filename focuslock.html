@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FocusLock: case study · livedOG</title>
+<meta name="description" content="FocusLock: a native Android focus app that enforces distraction-free work sessions through deep OS integration." />
+<meta name="theme-color" content="#05060a" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2714%27 fill=%27%2305060a%27/%3E%3Ctext x=%2732%27 y=%2742%27 font-family=%27Arial,sans-serif%27 font-size=%2728%27 font-weight=%27700%27 text-anchor=%27middle%27 fill=%27%23ff7a59%27%3EOG%3C/text%3E%3C/svg%3E" />
+<script>
+  document.documentElement.classList.add('js');
+  setTimeout(function () { if (!window.__ogReady) document.documentElement.classList.remove('js'); }, 4000);
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/og-system.css" />
+<link rel="stylesheet" href="css/og-home.css" />
+<link rel="stylesheet" href="css/og-case.css" />
+</head>
+<body class="case">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="ambient" aria-hidden="true"></div>
+
+<header class="nav" aria-label="Primary">
+  <a class="nav__brand" href="./" aria-label="livedOG, home">
+    <img class="nav__avatar" src="assets/images/Siddhant.jpeg" alt="" width="34" height="34" />
+    <span>lived<span class="nav__brand-og">OG</span></span>
+  </a>
+  <nav class="nav__links" aria-label="Sections">
+    <a class="nav__link" href="./#about">about</a>
+    <a class="nav__link" href="./#stack">stack</a>
+    <a class="nav__link" href="./#work" aria-current="true">work</a>
+    <a class="nav__link" href="./#contact">contact</a>
+  </nav>
+  <a class="np" id="now-playing" href="https://open.spotify.com/" target="_blank" rel="noopener noreferrer" hidden>
+    <span class="np__art"><img src="data:," alt="" width="36" height="36" /></span>
+    <span class="np__text">
+      <span class="np__label"><span class="np__bars" aria-hidden="true"><i></i><i></i><i></i></span><span class="np__status">on my playlist</span></span>
+      <span class="np__title"><span class="np__title-inner"></span></span>
+      <span class="np__artist"></span>
+    </span>
+  </a>
+  <a class="btn btn--primary nav__cta" href="./#contact">Let's talk <span class="btn__arrow" aria-hidden="true">→</span></a>
+  <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu">
+    <span class="nav__toggle-icon" aria-hidden="true"></span>
+    <span class="nav__toggle-label">Menu</span>
+  </button>
+</header>
+
+<div class="menu" id="menu">
+  <nav aria-label="Sections (mobile)">
+    <ul class="menu__links">
+      <li><a class="menu__link" href="./#about" style="--i:0"><span>01</span>about</a></li>
+      <li><a class="menu__link" href="./#stack" style="--i:1"><span>02</span>stack</a></li>
+      <li><a class="menu__link" href="./#work" style="--i:2"><span>03</span>work</a></li>
+      <li><a class="menu__link" href="./#contact" style="--i:3"><span>04</span>contact</a></li>
+    </ul>
+  </nav>
+</div>
+
+<main id="main">
+  <section class="case-hero" aria-labelledby="case-title">
+    <div class="container">
+      <a class="case-back" href="./#work">← all work</a>
+      <div class="case-hero__text" data-reveal>
+        <p class="eyebrow">case study · native Android</p>
+        <h1 class="case-hero__title" id="case-title">FocusLock</h1>
+        <p class="case-hero__tagline">A native Android focus app that enforces distraction-free work sessions through deep OS integration.</p>
+        <dl class="cs-facts">
+          <div><dt>role</dt><dd>Solo developer — architecture, Android development, UI, and web distribution</dd></div>
+          <div><dt>timeline</dt><dd>Personal project</dd></div>
+        </dl>
+        <ul class="chip-list" aria-label="Stack">
+          <li class="chip chip--icon"><img src="assets/icons/kotlin.svg" alt="" width="16" height="16" />Kotlin</li>
+          <li class="chip chip--icon"><img src="assets/icons/jetpackcompose.svg" alt="" width="16" height="16" />Jetpack Compose (Material 3)</li>
+          <li class="chip chip--icon"><img src="assets/icons/layers.svg" alt="" width="16" height="16" />MVVM + Clean Architecture</li>
+          <li class="chip chip--icon"><img src="assets/icons/sqlite.svg" alt="" width="16" height="16" />SQLite</li>
+          <li class="chip chip--icon"><img src="assets/icons/accessibility.svg" alt="" width="16" height="16" />AccessibilityService</li>
+          <li class="chip chip--icon"><img src="assets/icons/bell-ring.svg" alt="" width="16" height="16" />Foreground Service</li>
+          <li class="chip chip--icon"><img src="assets/icons/alarm-clock.svg" alt="" width="16" height="16" />AlarmManager</li>
+          <li class="chip chip--icon"><img src="assets/icons/shield-check.svg" alt="" width="16" height="16" />Device Admin API</li>
+          <li class="chip chip--icon"><img src="assets/icons/map-pin.svg" alt="" width="16" height="16" />GNSS location</li>
+        </ul>
+      </div>
+
+      <div class="cs-shot" data-reveal>
+        <button class="shot" type="button" data-lightbox="focuslock-full" aria-label="View the FocusLock preview full size">
+          <img src="assets/images/FocusLock.png" width="1536" height="1024" decoding="async"
+               alt="FocusLock app screens: weekly progress with streaks and XP, a 25-minute focus session with home geofence and blocked apps, the badge collection, and the AI coach" />
+          <span class="shot__hint" aria-hidden="true">⤢ view full size</span>
+        </button>
+      </div>
+      <dialog class="lightbox" id="focuslock-full" aria-label="FocusLock preview">
+        <form method="dialog"><button class="lightbox__close" type="submit" aria-label="Close preview">✕</button></form>
+        <img src="assets/images/FocusLock.png" width="1536" height="1024" loading="lazy" decoding="async"
+             alt="FocusLock app screens: weekly progress with streaks and XP, a 25-minute focus session with home geofence and blocked apps, the badge collection, and the AI coach" />
+      </dialog>
+    </div>
+  </section>
+
+  <div class="container case-body">
+
+    <section class="cs-section" aria-labelledby="fl-problem">
+      <div class="cs-section__label"><span>01</span><h2 id="fl-problem">The problem</h2></div>
+      <div class="cs-prose" data-reveal>
+        <p>Most “focus” and app-blocker tools fail at the exact moment they’re needed: the instant you feel the urge to quit, you swipe the app away or uninstall it in seconds. I wanted to explore how far a productivity app could go in surviving that moment of weakness — using legitimate Android system APIs — while still respecting the user’s control over their own device.</p>
+        <p class="cs-callout"><b>target user</b>Someone trying to break compulsive phone habits who wants self-imposed friction stronger than a simple “are you sure?” dialog.</p>
+      </div>
+    </section>
+
+    <section class="cs-section" aria-labelledby="fl-built">
+      <div class="cs-section__label"><span>02</span><h2 id="fl-built">What I built</h2></div>
+      <div class="cs-prose" data-reveal>
+        <p>FocusLock lets a user pick distracting apps, start a timed focus session, and have those apps actively blocked for the duration. The session is engineered to persist through the ways people normally escape:</p>
+        <ul class="cs-list">
+          <li><strong>App blocking</strong> via an <code>AccessibilityService</code> that detects the foreground app and redirects away from blocked ones to a custom “blocked” screen.</li>
+          <li><strong>A persistent countdown</strong> running in a foreground service with an ongoing notification.</li>
+          <li><strong>Reboot survival</strong> — a <code>BootReceiver</code> restores the active session and its remaining time after a restart, so powering off isn’t an escape hatch.</li>
+          <li><strong>Offline home geofencing</strong> — using raw GNSS (<code>LocationManager.GPS_PROVIDER</code>), focus mode can auto-trigger when the user arrives home, with zero internet or Wi-Fi dependency.</li>
+          <li><strong>Scheduled sessions and lifetime statistics</strong>, persisted in SQLite.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cs-section" aria-labelledby="fl-tech">
+      <div class="cs-section__label"><span>03</span><h2 id="fl-tech">Technical highlights</h2></div>
+      <div class="cs-cards cs-cards--2" data-reveal-group>
+        <article class="cs-card" data-reveal>
+          <span class="cs-card__num">01</span>
+          <h3>Clean, testable architecture</h3>
+          <p>MVVM + Repository pattern separates the Compose UI from domain logic and data sources, making the service-heavy codebase manageable.</p>
+        </article>
+        <article class="cs-card" data-reveal>
+          <span class="cs-card__num">02</span>
+          <h3>Coordinating Android background components</h3>
+          <p>The hardest part wasn’t any single API — it was making the <code>AccessibilityService</code>, foreground service, <code>AlarmManager</code>, and boot receiver agree on one source of truth for session state across process death and reboots.</p>
+        </article>
+        <article class="cs-card" data-reveal>
+          <span class="cs-card__num">03</span>
+          <h3>Modern Android constraints</h3>
+          <p>Targeting Android 14 meant working within foreground-service type rules, scoped storage, and runtime-permission gating for notifications and location.</p>
+        </article>
+        <article class="cs-card" data-reveal>
+          <span class="cs-card__num">04</span>
+          <h3>Material 3 dark UI</h3>
+          <p>Built entirely in Jetpack Compose.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="cs-section" aria-labelledby="fl-decision">
+      <div class="cs-section__label"><span>04</span><h2 id="fl-decision">The decision I’m most proud of</h2></div>
+      <div class="cs-prose cs-feature" data-reveal>
+        <p>While hardening the app against being quit, I hit a real engineering-ethics fork: I could use the Device Admin / Device Owner APIs to make the app effectively impossible to uninstall. <strong>I deliberately chose not to.</strong></p>
+        <p>An app the device owner can’t remove — and that silences the system’s own safety warnings — is indistinguishable from malware, both to Google Play Protect and to the person holding the phone. Worse, a bug in that path can brick a device into a factory-reset-only state (I actually reproduced this failure mode during testing).</p>
+        <p>So I redesigned the protection around a principle:</p>
+        <p class="cs-pullquote">impossible on impulse, <em>always possible with real effort.</em></p>
+        <p>Removal requires a cooldown, a deliberate confirmation, and an escalating penalty — strong enough to defeat a 10-second urge, but never a trap. This turned out to be a better product decision too: a phone someone can’t escape gets factory-reset in frustration; friction they chose for themselves is one they keep.</p>
+      </div>
+    </section>
+
+    <section class="cs-section" aria-labelledby="fl-learned">
+      <div class="cs-section__label"><span>05</span><h2 id="fl-learned">What I learned</h2></div>
+      <div class="cs-prose" data-reveal>
+        <ul class="cs-list">
+          <li>How Android’s accessibility, foreground-service, alarm, and boot subsystems actually interact under process death and reboot.</li>
+          <li>Designing persistent state that survives the OS killing your process.</li>
+          <li>That “make it unbreakable” is often the wrong requirement — the right one is “make it resilient without removing the user’s control.”</li>
+          <li>Security and distribution realities: signing config hygiene, Play Protect’s behavioral heuristics, and sideload distribution via a hosted landing page.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cs-section" aria-labelledby="fl-outcome">
+      <div class="cs-section__label"><span>06</span><h2 id="fl-outcome">Outcome</h2></div>
+      <div class="cs-prose" data-reveal>
+        <p>A fully functional Android app with a Compose UI, reboot-persistent enforcement engine, offline geofencing, and a self-hosted web landing page for distribution — plus a clear-eyed view of where self-control tooling should stop.</p>
+      </div>
+    </section>
+
+    <nav class="case-next" aria-label="Next project">
+      <div>
+        <span class="case-next__label">next case study</span>
+        <a class="case-next__link" href="levelforge.html">LevelForge →</a>
+      </div>
+      <a class="btn btn--ghost" href="./#contact">Let's talk</a>
+    </nav>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <p><span class="footer__brand">livedOG</span> · designer &amp; developer · 2026</p>
+    <a class="text-link" href="#main">back to top ↑</a>
+  </div>
+</footer>
+
+<script type="module" src="js/og/case.js"></script>
+</body>
+</html>

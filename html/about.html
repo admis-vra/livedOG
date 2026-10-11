@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>livedOG - About</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/livedog-portfolio.css" />
+  </head>
+  <body>
+<div id="welcome-overlay">
+  <div class="welcome-content">
+    <h1 class="welcome-title">livedOG</h1>
+    <p class="welcome-hint">Click anywhere to continue</p>
+  </div>
+</div>
+    <button
+      class="mobile-nav-toggle"
+      onclick="toggleNav()"
+      aria-label="Toggle navigation"
+    >
+      Menu
+    </button>
+
+    <!-- Mobile Header Bar -->
+<header class="mobile-top-bar">
+  <div class="mobile-brand">
+    <img class="mobile-avatar" src="../assets/images/Siddhant.jpeg" alt="livedOG avatar" />
+    <div class="mobile-brand-info">
+      <span class="mobile-brand-name">livedOG</span>
+      <span class="mobile-brand-status"><span class="status-dot"></span> online</span>
+    </div>
+  </div>
+  <button class="mobile-nav-toggle" onclick="toggleNav()" aria-label="Toggle navigation">
+    <span class="hamburger-box">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+    <span class="nav-toggle-text">Menu</span>
+  </button>
+</header>
+<div class="sidebar-backdrop" id="sidebar-backdrop" onclick="toggleNav()"></div>
+
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-profile" style="display: flex; align-items: center; gap: 16px;">
+    <img class="sidebar-avatar" src="../assets/images/Siddhant.jpeg" alt="livedOG avatar" />
+    <div class="sidebar-name">livedOG</div>
+  </div>
+
+  <nav>
+    <div class="nav-group">
+      <a href="livedog-portfolio.html#hero" class="nav-link"><span class="nav-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span> home</a>
+      <a href="livedog-portfolio.html#projects" class="nav-link"><span class="nav-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg></span> projects</a>
+      <a href="livedog-portfolio.html#nanolog" class="nav-link"><span class="nav-icon">N</span> nanolog</a>
+      <a href="livedog-portfolio.html#contact" class="nav-link"><span class="nav-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span> contact</a>
+      <a href="livedog-portfolio.html#guestbook" class="nav-link"><span class="nav-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span> guestbook</a>
+    </div>
+  </nav>
+
+  <div class="spotify-widget" id="spotify-widget">
+    <a href="#" id="spotify-link" target="_blank" class="spotify-container">
+      <img id="spotify-cover" src="" alt="Album Cover" class="spotify-cover" />
+      <div class="spotify-info">
+        <div class="spotify-title-wrapper">
+           <span class="spotify-icon"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.54.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.84.24 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.781-.18-.6.18-1.2.78-1.381 4.32-1.26 11.28-1.02 15.72 1.621.54.3.72.96.42 1.5-.3.541-.96.72-1.62.42z"/></svg></span>
+           <span id="spotify-title" class="spotify-title">Not Listening</span>
+        </div>
+        <span id="spotify-artist" class="spotify-artist">Spotify</span>
+      </div>
+    </a>
+  </div>
+
+  <a href="livedog-portfolio.html#contact" class="hire-btn">work with me -></a>
+</aside>
+
+    <main class="main">
+      <section id="about">
+        <div class="sec-header">
+          <span class="sec-num">01</span>
+          <h2 class="sec-title">about me</h2>
+          <div class="sec-line"></div>
+        </div>
+
+        <div class="about-section-grid">
+          <div class="about-card about-intro-card">
+            <h3 class="about-main-name">livedOG</h3>
+            <p class="about-main-copy">
+              I treat everyone the same, but I think in ways most people do not
+              even imagine. I am a builder who likes turning intense ideas into
+              real things, usually powered by late-night thoughts, discipline,
+              and a notepad full of dangerous levels of brainstorming.
+            </p>
+            <div class="stack-list">
+              <span class="stack-chip">Hindi</span>
+              <span class="stack-chip">English</span>
+              <span class="stack-chip">Gardwali</span>
+            </div>
+          </div>
+
+          <div class="about-card">
+            <h4>the name</h4>
+            <p>
+              <strong>livedOG</strong> is <strong>lived + OG</strong>: someone
+              who has lived through it and stayed original.
+            </p>
+            <p>
+              Read it backwards and you get my real name,
+              <strong>GODEVIL</strong>: <strong>GO + DEVIL</strong>. Same
+              letters, two sides. The alias is what people see; the name in
+              the mirror is the drive behind it.
+            </p>
+          </div>
+
+          <div class="about-card">
+            <h4>mindset</h4>
+            <p>
+              Ideas without action are useless. I trust discipline more than
+              motivation, every single time.
+            </p>
+            <blockquote class="about-quote">
+              "Motivation is a scam. Discipline has the real power."
+            </blockquote>
+          </div>
+
+          <div class="about-card">
+            <h4>currently</h4>
+            <p>
+              Building <strong>Problem Forge</strong>, a company idea where
+              people bring real-life problems and work toward real solutions
+              that help maintain balance in the real world.
+            </p>
+            <p>
+              Learning <strong>C</strong>, <strong>Python</strong>, and
+              <strong>content creation</strong>.
+            </p>
+            <p>
+              Most of my time goes into building projects and writing raw ideas
+              into my notepads. The notepad is scary. Do not touch it.
+            </p>
+          </div>
+
+          <div class="about-card">
+            <h4>main project</h4>
+            <p>
+              <strong>GATEX (SVES)</strong> is a web app for my college that
+              allows students with vehicles to enter through verified
+              registration. It helps the college maintain clean data and smooth
+              verification at the same time.
+            </p>
+          </div>
+
+          <div class="about-card">
+            <h4>stack</h4>
+            <div class="stack-grid">
+              <div class="stack-panel">
+                <div class="stack-panel-label">Languages</div>
+                <div class="stack-item">
+                  <img
+                    src="https://cdn.jsdelivr.net/npm/simple-icons@10/icons/javascript.svg"
+                    alt="JavaScript"
+                  /><span>JavaScript</span>
+                </div>
+                <div class="stack-item">
+                  <img
+                    src="https://cdn.jsdelivr.net/npm/simple-icons@10/icons/python.svg"
+                    alt="Python"
+                  /><span>Python</span>
+                </div>
+                <div class="stack-item">
+                  <img
+                    src="https://cdn.jsdelivr.net/npm/simple-icons@10/icons/cplusplus.svg"
+                    alt="C++"
+                  /><span>C++</span>
+                </div>
+                <div class="stack-item">
+                  <img
+                    src="https://cdn.jsdelivr.net/npm/simple-icons@10/icons/c.svg"
+                    alt="C"
+                  /><span>C</span>
+                </div>
+              </div>
+              <div class="stack-panel">
+                <div class="stack-panel-label">Web</div>
+                <div class="stack-item">
+                  <img
+                    src="https://cdn.jsdelivr.net/npm/simple-icons@10/icons/html5.svg"
+                    alt="HTML5"
+                  /><span>HTML / CSS</span>
+                </div>
+                <div class="stack-item">
+                  <img
+                    src="https://cdn.jsdelivr.net/npm/simple-icons@10/icons/css3.svg"
+                    alt="CSS3"
+                  /><span>CSS</span>
+                </div>
+              </div>
+              <div class="stack-panel">
+                <div class="stack-panel-label">Backend & DB</div>
+                <div class="stack-item">
+                  <img
+                    src="https://cdn.jsdelivr.net/npm/simple-icons@10/icons/flask.svg"
+                    alt="Flask"
+                  /><span>Flask</span>
+                </div>
+                <div class="stack-item">
+                  <img
+                    src="https://cdn.jsdelivr.net/npm/simple-icons@10/icons/postgresql.svg"
+                    alt="PostgreSQL"
+                  /><span>PostgreSQL</span>
+                </div>
+              </div>
+              <div class="stack-panel">
+                <div class="stack-panel-label">Tools</div>
+                <div class="stack-item">
+                  <img
+                    src="https://cdn.jsdelivr.net/npm/simple-icons@10/icons/github.svg"
+                    alt="GitHub"
+                  /><span>GitHub</span>
+                </div>
+                <div class="stack-item"><span>Cursor</span></div>
+                <div class="stack-item"><span>Claude Code</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-card">
+            <h4>things i love</h4>
+            <p>
+              Traveling, anime, cooking, coding, bringing new ideas into real
+              life, making new friends, building partnerships, and above all, my
+              parents.
+            </p>
+          </div>
+
+          <div class="about-card">
+            <h4>things i avoid</h4>
+            <p>Negative & Fake people. also hate storyline Games.</p>
+          </div>
+
+          <div class="about-card">
+            <h4>fun section</h4>
+            <p><strong>colors:</strong> green like nature, black like space.</p>
+            <p>
+              <strong>games:</strong> Valorant. FPS games
+              &gt;&gt;&gt;&gt;&gt;&gt;
+            </p>
+            <p><strong>anime:</strong> One Piece, Classroom of the Elite.</p>
+            <p>
+              <strong>random trait:</strong> when I am alone, I talk to myself a
+              lot. Full conversations. Full theories. Full chaos.
+            </p>
+          </div>
+
+          <div class="about-card">
+            <h4>favorites</h4>
+            <p>One all-time favorite: <strong>Jensen Huang</strong>.</p>
+          </div>
+
+          <div class="about-card">
+            <h4>fun facts</h4>
+            <p>
+              I usually go quiet when I hear nonsense around me. Silence saves
+              energy.
+            </p>
+            <p>I am into skincare, and sometimes I disappear into books.</p>
+            <p>
+              Currently <strong id="current-age" data-birthdate="2007-09-25">calculating age...</strong> old.
+            </p>
+          </div>
+
+          <div class="about-card">
+            <h4>socials</h4>
+            <div class="social-mini">
+              <a href="https://github.com/admis-vra" target="_blank"
+                >GitHub / admis-vra</a
+              >
+              <a href="https://www.instagram.com/thats._.sidd" target="_blank"
+                >Instagram / thats._.sidd</a
+              >
+              <a href="https://www.linkedin.com/in/vra-admis/" target="_blank"
+                >LinkedIn / vra-admis</a
+              >
+            </div>
+          </div>
+
+          <div class="about-card">
+            <h4>extra personality</h4>
+            <p>
+              everyone: "i do not know how to start"<br />meanwhile me: "i am
+              learning how to control a jet while flying it."
+            </p>
+            <p><strong>Do not worry about results. Just start.</strong></p>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>livedOG</span> - designer &amp; developer
+      <span style="color: var(--muted)">built with care | 2026</span>
+    </footer>
+
+    <script src="../js/livedog-portfolio.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+

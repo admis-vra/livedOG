@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>LevelForge: case study · livedOG</title>
+<meta name="description" content="LevelForge: an offline-first, gamified habit tracker for Android. Every habit earns XP, streaks pay bonuses, and milestones unlock badges on the climb from Beginner to Habit God." />
+<meta name="theme-color" content="#05060a" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2714%27 fill=%27%2305060a%27/%3E%3Ctext x=%2732%27 y=%2742%27 font-family=%27Arial,sans-serif%27 font-size=%2728%27 font-weight=%27700%27 text-anchor=%27middle%27 fill=%27%23ff7a59%27%3EOG%3C/text%3E%3C/svg%3E" />
+<script>
+  document.documentElement.classList.add('js');
+  setTimeout(function () { if (!window.__ogReady) document.documentElement.classList.remove('js'); }, 4000);
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/og-system.css" />
+<link rel="stylesheet" href="css/og-home.css" />
+<link rel="stylesheet" href="css/og-case.css" />
+</head>
+<body class="case">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="ambient" aria-hidden="true"></div>
+
+<header class="nav" aria-label="Primary">
+  <a class="nav__brand" href="./" aria-label="livedOG, home">
+    <img class="nav__avatar" src="assets/images/Siddhant.jpeg" alt="" width="34" height="34" />
+    <span>lived<span class="nav__brand-og">OG</span></span>
+  </a>
+  <nav class="nav__links" aria-label="Sections">
+    <a class="nav__link" href="./#about">about</a>
+    <a class="nav__link" href="./#stack">stack</a>
+    <a class="nav__link" href="./#work" aria-current="true">work</a>
+    <a class="nav__link" href="./#contact">contact</a>
+  </nav>
+  <a class="np" id="now-playing" href="https://open.spotify.com/" target="_blank" rel="noopener noreferrer" hidden>
+    <span class="np__art"><img src="data:," alt="" width="36" height="36" /></span>
+    <span class="np__text">
+      <span class="np__label"><span class="np__bars" aria-hidden="true"><i></i><i></i><i></i></span><span class="np__status">on my playlist</span></span>
+      <span class="np__title"><span class="np__title-inner"></span></span>
+      <span class="np__artist"></span>
+    </span>
+  </a>
+  <a class="btn btn--primary nav__cta" href="./#contact">Let's talk <span class="btn__arrow" aria-hidden="true">→</span></a>
+  <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu">
+    <span class="nav__toggle-icon" aria-hidden="true"></span>
+    <span class="nav__toggle-label">Menu</span>
+  </button>
+</header>
+
+<div class="menu" id="menu">
+  <nav aria-label="Sections (mobile)">
+    <ul class="menu__links">
+      <li><a class="menu__link" href="./#about" style="--i:0"><span>01</span>about</a></li>
+      <li><a class="menu__link" href="./#stack" style="--i:1"><span>02</span>stack</a></li>
+      <li><a class="menu__link" href="./#work" style="--i:2"><span>03</span>work</a></li>
+      <li><a class="menu__link" href="./#contact" style="--i:3"><span>04</span>contact</a></li>
+    </ul>
+  </nav>
+</div>
+
+<main id="main">
+  <section class="case-hero" aria-labelledby="case-title">
+    <div class="container">
+      <a class="case-back" href="./#work">← all work</a>
+      <div class="case-hero__text" data-reveal>
+        <p class="eyebrow">case study · Android app · v1.0.0</p>
+        <h1 class="case-hero__title" id="case-title">LevelForge</h1>
+        <p class="case-hero__tagline">An offline-first, gamified habit tracker for Android. Every habit you complete earns XP, streaks pay bonuses, and milestones unlock badges on the climb from Beginner to Habit God.</p>
+        <dl class="cs-facts">
+          <div><dt>role</dt><dd>Product design, mobile development, release engineering</dd></div>
+          <div><dt>timeline</dt><dd>October 2026 · version 1.0.0</dd></div>
+          <div><dt>platform</dt><dd>Android 7.0+ (React Native, iOS-ready codebase)</dd></div>
+        </dl>
+        <ul class="chip-list" aria-label="Stack">
+          <li class="chip chip--icon"><img src="assets/icons/react.svg" alt="" width="16" height="16" />React Native</li>
+          <li class="chip chip--icon"><img src="assets/icons/expo.svg" alt="" width="16" height="16" />Expo SDK 57</li>
+          <li class="chip chip--icon"><img src="assets/icons/typescript.svg" alt="" width="16" height="16" />TypeScript</li>
+          <li class="chip chip--icon"><img src="assets/icons/sparkles.svg" alt="" width="16" height="16" />Reanimated 4</li>
+          <li class="chip chip--icon"><img src="assets/icons/database.svg" alt="" width="16" height="16" />Zustand</li>
+          <li class="chip chip--icon"><img src="assets/icons/reactquery.svg" alt="" width="16" height="16" />TanStack Query</li>
+          <li class="chip chip--icon"><img src="assets/icons/flask.svg" alt="" width="16" height="16" />Flask</li>
+          <li class="chip chip--icon"><img src="assets/icons/supabase.svg" alt="" width="16" height="16" />Supabase (Postgres)</li>
+        </ul>
+      </div>
+
+      <div class="cs-shot" data-reveal>
+        <button class="shot" type="button" data-lightbox="levelforge-full" aria-label="View the LevelForge preview full size">
+          <img src="assets/images/LevelForge.webp" width="1536" height="1024" decoding="async"
+               alt="LevelForge app screens: today's habits with XP progress, a level-up screen, the badge collection, the AI coach, and the leaderboard with chat" />
+          <span class="shot__hint" aria-hidden="true">⤢ view full size</span>
+        </button>
+      </div>
+      <dialog class="lightbox" id="levelforge-full" aria-label="LevelForge preview">
+        <form method="dialog"><button class="lightbox__close" type="submit" aria-label="Close preview">✕</button></form>
+        <img src="assets/images/LevelForge.webp" width="1536" height="1024" loading="lazy" decoding="async"
+             alt="LevelForge app screens: today's habits with XP progress, a level-up screen, the badge collection, the AI coach, and the leaderboard with chat" />
+      </dialog>
+
+      <ul class="cs-stats" aria-label="Scale" data-reveal-group>
+        <li class="cs-stat" data-reveal><strong>20</strong><span>screens</span></li>
+        <li class="cs-stat" data-reveal><strong>148</strong><span>source files</span></li>
+        <li class="cs-stat" data-reveal><strong>~23k</strong><span>lines of TypeScript</span></li>
+        <li class="cs-stat" data-reveal><strong>30</strong><span>unit tests</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="container case-body">
+
+    <section class="cs-section" aria-labelledby="lf-problem">
+      <div class="cs-section__label"><span>01</span><h2 id="lf-problem">The problem</h2></div>
+      <div class="cs-prose" data-reveal>
+        <p>Most habit trackers are checklists. They work for a week, then the novelty wears off and the streak quietly dies. LevelForge started as a web app (Flask + React) that borrowed mechanics from games — XP, ranks, badges — to make consistency feel rewarding. But habits live on your phone, and opening a browser tab to tick off “Drink water” is exactly the kind of friction that kills a habit.</p>
+        <p class="cs-callout"><b>goal</b>Rebuild LevelForge as a native mobile app where checking in takes one tap, feels rewarding, and works anywhere — even with no signal.</p>
+      </div>
+    </section>
+
+    <section class="cs-section" aria-labelledby="lf-constraints">
+      <div class="cs-section__label"><span>02</span><h2 id="lf-constraints">Constraints</h2></div>
+      <div class="cs-prose" data-reveal>
+        <ul class="cs-list">
+          <li>Keep everything users liked about the web version: the 10-rank ladder, the original badge artwork, the dark neon look.</li>
+          <li>Work fully offline; the existing server should be optional, not required.</li>
+          <li>Distribute outside the Play Store at first — so the app has to earn trust on its own (signing, permissions, transparency).</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cs-section" aria-labelledby="lf-decisions">
+      <div class="cs-section__label"><span>03</span><h2 id="lf-decisions">Key decisions</h2></div>
+      <div class="cs-cards" data-reveal-group>
+        <article class="cs-card" data-reveal>
+          <span class="cs-card__num">01</span>
+          <h3>Offline-first, with the server as an optional extra</h3>
+          <p>Habits, XP, streaks, badges, analytics, reminders and the AI coach all run on the device (Zustand persisted to local storage). The existing Flask/Supabase backend powers only what genuinely needs a server: leaderboards, friends, chat and server-side AI replies.</p>
+          <p class="cs-why"><b>Why:</b> the core loop — check in, earn XP — must never wait on a network or a sleeping free-tier server. This decision paid off later, when the cloud database went down and the app kept working.</p>
+        </article>
+        <article class="cs-card" data-reveal>
+          <span class="cs-card__num">02</span>
+          <h3>A derived game engine instead of a running total</h3>
+          <p>Rather than adding and subtracting XP as users tap, a pure TypeScript engine recalculates everything from the check-in history: streaks, XP, level, rank and badge progress.</p>
+          <ul class="cs-list">
+            <li>Un-checking a habit removes exactly the XP it gave — no drift, no exploits.</li>
+            <li>Editing a habit's schedule or archiving it never rewrites past days (each habit keeps a schedule history and pause ranges).</li>
+            <li>The rules are testable in isolation: 30 unit tests cover streaks, rest days, schedule edits, weekly goals and badge unlocks.</li>
+          </ul>
+        </article>
+        <article class="cs-card" data-reveal>
+          <span class="cs-card__num">03</span>
+          <h3>Rebalancing the economy</h3>
+          <p>The rules: +10 XP per quest, streak bonuses of +5 / +15 / +25 at 3 / 7 / 30 days, +50 for a Perfect Day, and badge rewards.</p>
+          <p>Early testing exposed a problem: badge rewards inherited from the web app (up to 5,000 XP) let a new user with nine starter habits jump two ranks on day one — making ranks meaningless. I tied badge rewards to rarity (25 → 800 XP), recalibrated three “secret” badges that were trivially easy, and added a balance test that fails if badge XP ever outweighs habit XP on day one.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="cs-section" aria-labelledby="lf-built">
+      <div class="cs-section__label"><span>04</span><h2 id="lf-built">What I built</h2></div>
+      <div class="cs-prose" data-reveal>
+        <ul class="cs-list">
+          <li><strong>Dashboard</strong> — rank, level and XP bar, streak flame, daily progress ring, and Today's Quests with a one-tap check-off, floating “+XP”, particle burst and haptics.</li>
+          <li><strong>Habits</strong> — a 4-step creator (daily, specific weekdays, or “3× per week”), time windows and reminders, archive/restore, calendar history, CSV import/export.</li>
+          <li><strong>Analytics</strong> — a GitHub-style 52-week heatmap, this-week-vs-last comparison, monthly trend, best time of day, category split, streak health.</li>
+          <li><strong>78 badges across 14 categories</strong> with original artwork and six rarity tiers — including secret, recovery and time-of-day badges.</li>
+          <li><strong>Celebrations</strong> — LEVEL UP!, rank-up, badge-unlock and Perfect Day moments with confetti and haptics.</li>
+          <li><strong>AI coach</strong> — plans the day, detects burnout, builds streak-recovery plans; runs on-device and upgrades to the server AI when connected.</li>
+          <li><strong>Arena</strong> — leagues, global and friends leaderboards, real-time chat (Socket.IO) via the optional cloud.</li>
+          <li><strong>Onboarding &amp; landing page</strong> — animated splash, a 4-step “create your hero” tour, and a website with download, checksums and a dev blog.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cs-section" aria-labelledby="lf-design">
+      <div class="cs-section__label"><span>05</span><h2 id="lf-design">Design system</h2></div>
+      <div class="cs-prose" data-reveal>
+        <p>A “cyber dark-glass” theme: obsidian backgrounds, frosted cards with neon borders, electric purple for progress, gold for XP, fire orange for streaks. Built as a reusable UI kit (cards, buttons, progress rings, sheets, badge art) with dark and light themes, and accessibility labels on every interactive element. The original ~190 MB of badge and rank artwork was converted to WebP at ~3 MB with no visible quality loss.</p>
+      </div>
+    </section>
+
+    <section class="cs-section" aria-labelledby="lf-ship">
+      <div class="cs-section__label"><span>06</span><h2 id="lf-ship">Shipping outside the Play Store</h2></div>
+      <div class="cs-prose" data-reveal>
+        <p>Sideloaded apps are judged harshly by users and by Google Play Protect, so release engineering was a feature in itself:</p>
+        <ul class="cs-list">
+          <li><strong>Signed with a dedicated release key</strong>; its fingerprint is published so every update can be verified.</li>
+          <li><strong>Permissions cut from 25 to 7.</strong> Libraries had silently added camera, storage and 18 phone-maker “badge” permissions the app never uses — all stripped. What remains: notifications, vibration, network, and restoring reminders after a reboot.</li>
+          <li><strong>Targets the latest Android (API 36)</strong>, ARM-only build to halve the download size.</li>
+          <li><strong>Verifiable downloads:</strong> a release script reads version, size, minimum Android version and checksums from the APK itself and publishes them on the site.</li>
+          <li><strong>Hardened the client:</strong> the server address is locked in release builds — an editable URL would let someone trick users into sending their password to a fake server.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cs-section" aria-labelledby="lf-bugs">
+      <div class="cs-section__label"><span>07</span><h2 id="lf-bugs">The hardest bugs — and how real devices solved them</h2></div>
+      <div class="cs-prose">
+        <p data-reveal>Two bugs appeared only on a real phone (OPPO, Android 12, ColorOS). My first two fixes were educated guesses tested in a browser — and both missed. Connecting the phone over USB and reading its logs found the real causes within minutes.</p>
+        <div class="cs-cards" data-reveal-group>
+          <article class="cs-card" data-reveal>
+            <span class="cs-card__num">bug 01</span>
+            <h3>The app closed after “Continue” during onboarding.</h3>
+            <p>The crash log read:</p>
+            <code class="cs-log">[Worklets] Tried to synchronously call a Remote Function … at QuestsStep</code>
+            <p>An animation running on Android's UI thread called an ordinary JavaScript helper — fatal on a phone, invisible in a browser (which runs animations on the JS thread).</p>
+            <p class="cs-why"><b>Fix:</b> compute the values before the animation; audit every animation in the app for the same pattern.</p>
+          </article>
+          <article class="cs-card" data-reveal>
+            <span class="cs-card__num">bug 02</span>
+            <h3>Scrolling past the end wrapped to the opposite end.</h3>
+            <p>Logging scroll positions on the device showed it precisely: at the bottom (y = 1635), one more flick produced momentum 1635 → 0 in a quarter of a second. React Native starts Android flings with an unbounded limit and cancels them at the edge; ColorOS's custom “bounce” turns that cancellation into a jump to the wrong end.</p>
+            <p class="cs-why"><b>Fix:</b> a reusable scroll guard that cancels momentum after a flick that started pinned to an edge. Verified on the device: 24 bogus flings blocked, normal scrolling unaffected.</p>
+          </article>
+          <article class="cs-card" data-reveal>
+            <span class="cs-card__num">bug 03</span>
+            <h3>The cloud went dark.</h3>
+            <p>The backend reported:</p>
+            <code class="cs-log">tenant/user … not found</code>
+            <p>Checking DNS, configuration and history showed the Supabase project had been auto-paused after inactivity — not a code bug. After restoring it, I verified the login and sign-up paths against the live server using requests designed to change nothing in the database.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section" aria-labelledby="lf-results">
+      <div class="cs-section__label"><span>08</span><h2 id="lf-results">Results</h2></div>
+      <div class="cs-prose">
+        <ul class="cs-stats cs-stats--inline" aria-label="Results in numbers" data-reveal-group>
+          <li class="cs-stat" data-reveal><strong>78</strong><span>badges · 14 categories</span></li>
+          <li class="cs-stat" data-reveal><strong>10</strong><span>ranks</span></li>
+          <li class="cs-stat" data-reveal><strong>25 → 7</strong><span>permissions</span></li>
+          <li class="cs-stat" data-reveal><strong>~190 MB → ~3 MB</strong><span>artwork</span></li>
+        </ul>
+        <ul class="cs-list" data-reveal>
+          <li>A complete native app — 20 screens, fully offline — shipped as a signed APK with a landing page, download verification and a public dev blog.</li>
+          <li>78 badges, 10 ranks, 14 categories, and an XP economy protected by automated tests.</li>
+          <li>7 permissions instead of 25; artwork ~190 MB → ~3 MB.</li>
+          <li>Two device-only bugs found from real crash logs and measured data, then confirmed fixed on the phone.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cs-section" aria-labelledby="lf-learned">
+      <div class="cs-section__label"><span>09</span><h2 id="lf-learned">What I learned</h2></div>
+      <div class="cs-cards cs-cards--2" data-reveal-group>
+        <article class="cs-card" data-reveal><h3>Real devices beat assumptions.</h3><p>The browser said everything worked; the phone disagreed. Logs and measurements ended two days of guessing in minutes.</p></article>
+        <article class="cs-card" data-reveal><h3>Derive, don't mutate.</h3><p>Computing game state from history made the app correct by construction and easy to test.</p></article>
+        <article class="cs-card" data-reveal><h3>Game balance is a product decision.</h3><p>One mis-tuned number (a badge reward) quietly broke the meaning of the whole rank system.</p></article>
+        <article class="cs-card" data-reveal><h3>Trust is engineered.</h3><p>For an app outside the Play Store, signing, minimal permissions and published checksums matter as much as features.</p></article>
+        <article class="cs-card" data-reveal><h3>Free tiers have failure modes.</h3><p>Inactive free databases pause — monitoring and backups belong in the plan, not the post-mortem.</p></article>
+      </div>
+    </section>
+
+    <section class="cs-section" aria-labelledby="lf-next">
+      <div class="cs-section__label"><span>10</span><h2 id="lf-next">What's next</h2></div>
+      <div class="cs-prose" data-reveal>
+        <ul class="cs-list">
+          <li>Sync on-device XP to the cloud leaderboards.</li>
+          <li>Google Play release with developer verification.</li>
+          <li>Habit Duels and team “Squad Goals”.</li>
+          <li>Proactive coach nudges, a monthly report, and a home-screen widget.</li>
+        </ul>
+      </div>
+    </section>
+
+    <nav class="case-next" aria-label="Next project">
+      <div>
+        <span class="case-next__label">next case study</span>
+        <a class="case-next__link" href="focuslock.html">FocusLock →</a>
+      </div>
+      <a class="btn btn--ghost" href="./#contact">Let's talk</a>
+    </nav>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <p><span class="footer__brand">livedOG</span> · designer &amp; developer · 2026</p>
+    <a class="text-link" href="#main">back to top ↑</a>
+  </div>
+</footer>
+
+<script type="module" src="js/og/case.js"></script>
+</body>
+</html>

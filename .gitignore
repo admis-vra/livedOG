@@ -1,0 +1,14 @@
+# Local-only: old copy of the site (still contains removed personal details) and editor settings
+_backup/
+.claude/
+
+# Python caches
+__pycache__/
+*.pyc
+
+# Vercel CLI
+.vercel/
+
+# Unused, large and copyrighted video clips (not referenced by the live site)
+assets/Zoro.mp4
+assets/video/

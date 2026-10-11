@@ -1,0 +1,4 @@
+# Local-only files that should not be published
+_backup
+.claude
+*.py

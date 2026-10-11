@@ -1,0 +1,540 @@
+/* ==========================================================================
+   livedOG case-study pages. Builds on og-system.css and reuses the cover motifs
+   from og-home.css (loaded alongside).
+   ========================================================================== */
+
+.case-hero {
+  position: relative;
+  z-index: var(--z-content);
+  padding-top: calc(var(--nav-h) + clamp(56px, 9vw, 120px));
+  padding-bottom: clamp(48px, 7vw, 96px);
+}
+
+.case-back {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-2);
+  min-height: 44px;
+  margin-bottom: var(--s-6);
+  font-family: var(--f-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: var(--tracking-mono);
+  text-transform: uppercase;
+  color: var(--c-text-2);
+  transition: color var(--dur-2);
+}
+
+.case-back:hover {
+  color: var(--c-cyan);
+}
+
+.case-hero__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(32px, 6vw, 88px);
+  align-items: center;
+}
+
+.case-hero__text {
+  display: grid;
+  justify-items: start;
+  gap: var(--s-5);
+}
+
+.case-hero__title {
+  font-size: clamp(3rem, 1.6rem + 6vw, 7rem);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+}
+
+.case-hero__tagline {
+  font-size: var(--fs-lg);
+  color: var(--c-text-2);
+  max-width: 30ch;
+}
+
+.case-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-3) var(--s-6);
+  width: 100%;
+  margin: 0;
+  padding-block: var(--s-4);
+  border-block: 1px solid var(--c-line);
+}
+
+.case-facts dt {
+  font-family: var(--f-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: var(--tracking-mono);
+  text-transform: uppercase;
+  color: var(--c-text-3);
+}
+
+.case-facts dd {
+  margin: 2px 0 0;
+  font-weight: 500;
+}
+
+/* Static covers on case pages are always in their "settled" state */
+.case-hero .cover .forge-cell {
+  transform: none;
+  opacity: 1;
+}
+
+.case-hero .is-in .habit-cell[data-level='1'] { background: rgba(125, 211, 252, 0.25); }
+.case-hero .is-in .habit-cell[data-level='2'] { background: rgba(125, 211, 252, 0.55); }
+.case-hero .is-in .habit-cell[data-level='3'] {
+  background: var(--c-cyan);
+  box-shadow: 0 0 12px rgba(125, 211, 252, 0.5);
+}
+
+.case-body {
+  position: relative;
+  z-index: var(--z-content);
+  padding-bottom: var(--section-pad);
+}
+
+.case-body__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: var(--s-4);
+}
+
+.case-block {
+  display: grid;
+  align-content: start;
+  gap: var(--s-4);
+}
+
+.case-block--wide {
+  grid-column: 1 / -1;
+}
+
+.case-block h2 {
+  font-size: var(--fs-xl);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.case-block p {
+  max-width: var(--w-text);
+  color: var(--c-text-2);
+  font-size: var(--fs-md);
+}
+
+.case-list {
+  display: grid;
+  gap: var(--s-3);
+}
+
+.case-list li {
+  position: relative;
+  padding-left: var(--s-6);
+  color: var(--c-text-2);
+}
+
+.case-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.75em;
+  width: 16px;
+  height: 1px;
+  background: var(--c-cyan);
+}
+
+/* ==========================================================================
+   Long-form case studies (LevelForge, FocusLock)
+   ========================================================================== */
+
+.cs-shot {
+  margin-top: clamp(40px, 6vw, 72px);
+}
+
+.cs-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--s-4) var(--s-6);
+  width: 100%;
+  margin: 0;
+  padding-block: var(--s-5);
+  border-block: 1px solid var(--c-line);
+}
+
+.cs-facts dt {
+  font-family: var(--f-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: var(--tracking-mono);
+  text-transform: uppercase;
+  color: var(--c-text-3);
+}
+
+.cs-facts dd {
+  margin: 4px 0 0;
+  color: var(--c-text);
+}
+
+/* Big-number strip */
+.cs-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--s-4);
+  margin-block: clamp(48px, 7vw, 88px);
+}
+
+.cs-stat {
+  padding: var(--s-5);
+  border-radius: var(--r-md);
+  border: 1px solid var(--c-line);
+  background: var(--c-surface);
+}
+
+.cs-stat strong {
+  display: block;
+  font-size: clamp(2rem, 1.4rem + 2.4vw, 3.2rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  background: var(--grad-duality);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.cs-stat span {
+  display: block;
+  margin-top: var(--s-2);
+  font-size: var(--fs-sm);
+  color: var(--c-text-2);
+}
+
+/* Inside a text column: two per row, smaller numbers so long values like "~190 MB → ~3 MB" fit */
+.cs-stats--inline {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-block: 0;
+}
+
+.cs-stats--inline strong {
+  font-size: clamp(1.4rem, 1rem + 1.4vw, 2rem);
+}
+
+@media (max-width: 760px) {
+  .cs-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 420px) {
+  .cs-stats--inline {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Section: sticky label column + content column */
+.cs-section {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: var(--s-6) clamp(32px, 5vw, 80px);
+  padding-block: clamp(48px, 6vw, 80px);
+  border-top: 1px solid var(--c-line);
+}
+
+.cs-section__label {
+  align-self: start;
+  position: sticky;
+  top: calc(var(--nav-h) + 40px);
+  display: grid;
+  gap: var(--s-2);
+}
+
+.cs-section__label span {
+  font-family: var(--f-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: var(--tracking-mono);
+  color: var(--c-cyan);
+}
+
+.cs-section__label h2 {
+  font-size: var(--fs-lg);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.cs-prose {
+  display: grid;
+  gap: var(--s-5);
+  max-width: 70ch;
+  font-size: var(--fs-md);
+  color: var(--c-text-2);
+}
+
+.cs-prose strong {
+  color: var(--c-text);
+}
+
+.cs-prose h3 {
+  font-size: var(--fs-lg);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: var(--c-text);
+}
+
+.cs-prose code,
+.cs-card code {
+  font-family: var(--f-mono);
+  font-size: 0.86em;
+  padding: 1px 6px;
+  border-radius: 6px;
+  border: 1px solid var(--c-line);
+  background: var(--c-surface-2);
+  color: var(--c-cyan);
+  overflow-wrap: anywhere;
+}
+
+.cs-list {
+  display: grid;
+  gap: var(--s-3);
+}
+
+.cs-list li {
+  position: relative;
+  padding-left: var(--s-6);
+}
+
+.cs-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.8em;
+  width: 16px;
+  height: 1px;
+  background: var(--c-cyan);
+}
+
+.cs-list strong {
+  color: var(--c-text);
+}
+
+/* Highlighted single statement: goal, target user */
+.cs-callout {
+  padding: var(--s-5) var(--s-6);
+  border-radius: var(--r-md);
+  border: 1px solid rgba(125, 211, 252, 0.25);
+  border-left: 3px solid var(--c-cyan);
+  background: rgba(125, 211, 252, 0.04);
+  color: var(--c-text);
+}
+
+.cs-callout b {
+  display: block;
+  margin-bottom: 4px;
+  font-family: var(--f-mono);
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  letter-spacing: var(--tracking-mono);
+  text-transform: uppercase;
+  color: var(--c-cyan);
+}
+
+/* Numbered cards: key decisions, bugs, highlights */
+.cs-cards {
+  display: grid;
+  gap: var(--s-4);
+}
+
+.cs-cards--2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.cs-card {
+  display: grid;
+  align-content: start;
+  gap: var(--s-3);
+  padding: clamp(20px, 3vw, 28px);
+  border-radius: var(--r-md);
+  border: 1px solid var(--c-line);
+  background: var(--c-surface);
+  color: var(--c-text-2);
+}
+
+.cs-card__num {
+  font-family: var(--f-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: var(--tracking-mono);
+  color: var(--c-ember);
+}
+
+.cs-card h3 {
+  font-size: var(--fs-lg);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: var(--c-text);
+}
+
+.cs-card .cs-why {
+  padding-top: var(--s-3);
+  border-top: 1px dashed var(--c-line-2);
+}
+
+.cs-card .cs-why b {
+  color: var(--c-text);
+}
+
+/* A log line or error message, shown as evidence */
+.cs-log {
+  display: block;
+  padding: var(--s-3) var(--s-4);
+  border-radius: var(--r-sm);
+  border: 1px solid rgba(255, 122, 89, 0.3);
+  background: #0a0b12;
+  font-family: var(--f-mono);
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: #ffb4a0;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 900px) {
+  .cs-cards--2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* The ethics decision gets the strongest treatment on the page */
+.cs-feature {
+  padding: clamp(24px, 4vw, 44px);
+  border-radius: var(--r-lg);
+  border: 1px solid rgba(255, 122, 89, 0.35);
+  background:
+    radial-gradient(70% 90% at 0% 0%, rgba(255, 122, 89, 0.1), transparent 70%),
+    radial-gradient(60% 80% at 100% 100%, rgba(125, 211, 252, 0.07), transparent 70%),
+    var(--c-surface);
+}
+
+.cs-pullquote {
+  margin: var(--s-2) 0;
+  font-size: clamp(1.6rem, 1rem + 2.6vw, 2.6rem);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: var(--c-text);
+}
+
+.cs-pullquote em {
+  font-style: normal;
+  color: var(--c-ember);
+}
+
+@media (max-width: 900px) {
+  .cs-section {
+    grid-template-columns: 1fr;
+    gap: var(--s-5);
+  }
+  .cs-section__label {
+    position: static;
+  }
+}
+
+/* Products built under the company */
+.pf-products {
+  gap: var(--s-4);
+}
+
+.pf-product {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr);
+  gap: var(--s-6);
+  align-items: center;
+  padding: var(--s-3);
+  border-radius: var(--r-md);
+  border: 1px solid var(--c-line);
+  background: rgba(255, 255, 255, 0.02);
+  transition: border-color var(--dur-2) var(--ease-out), background-color var(--dur-2) var(--ease-out);
+}
+
+.pf-product:hover {
+  border-color: rgba(125, 211, 252, 0.35);
+  background: rgba(125, 211, 252, 0.04);
+}
+
+.pf-product img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: var(--r-sm);
+  /* Shown behind the image, and in its place if the file is missing */
+  background:
+    radial-gradient(60% 70% at 30% 30%, rgba(125, 211, 252, 0.12), transparent 70%),
+    var(--c-surface-2);
+}
+
+.pf-product__text {
+  display: grid;
+  gap: var(--s-2);
+  color: var(--c-text-2);
+}
+
+.pf-product__text strong {
+  font-size: var(--fs-lg);
+  color: var(--c-text);
+}
+
+@media (max-width: 640px) {
+  .pf-product {
+    grid-template-columns: 1fr;
+    gap: var(--s-4);
+  }
+}
+
+.case-next {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-5);
+  margin-top: clamp(56px, 8vw, 112px);
+  padding-top: var(--s-6);
+  border-top: 1px solid var(--c-line);
+}
+
+.case-next__label {
+  font-family: var(--f-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: var(--tracking-mono);
+  text-transform: uppercase;
+  color: var(--c-text-3);
+}
+
+.case-next__link {
+  display: block;
+  font-size: var(--fs-2xl);
+  font-weight: 600;
+  letter-spacing: var(--tracking-tight);
+  line-height: 1.05;
+  transition: color var(--dur-2);
+}
+
+.case-next__link:hover {
+  color: var(--c-cyan);
+}
+
+/* Case pages: nav links point to home sections, so there is nothing to spy on */
+.case .nav__indicator {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .case-hero__grid,
+  .case-body__grid {
+    grid-template-columns: 1fr;
+  }
+}
