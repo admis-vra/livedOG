@@ -986,6 +986,14 @@
   margin-top: var(--s-2);
 }
 
+/* Download (primary) + case study (ghost) side by side; wraps on narrow screens */
+.project__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-3);
+  margin-top: var(--s-2);
+}
+
 @media (max-width: 900px) {
   .project {
     grid-template-columns: 1fr;

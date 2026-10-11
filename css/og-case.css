@@ -154,6 +154,21 @@
   margin-top: clamp(40px, 6vw, 72px);
 }
 
+/* Download call-to-action in the case-study header */
+.case-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s-3) var(--s-5);
+  margin-top: var(--s-2);
+}
+
+.case-actions__note {
+  font-family: var(--f-mono);
+  font-size: var(--fs-xs);
+  color: var(--c-text-3);
+}
+
 .cs-facts {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
